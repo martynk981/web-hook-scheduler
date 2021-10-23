@@ -1,0 +1,42 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/web-hook-scheduler/src",
+  "monorepo": true,
+  "root": "apps/web-hook-scheduler",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/web-hook-scheduler/tsconfig.app.json"
+  },
+  "projects": {
+    "web-hook-scheduler": {
+      "type": "application",
+      "root": "apps/web-hook-scheduler",
+      "entryFile": "main",
+      "sourceRoot": "apps/web-hook-scheduler/src",
+      "compilerOptions": {
+        "webpack": true,
+        "tsConfigPath": "apps/web-hook-scheduler/tsconfig.app.json"
+      }
+    },
+    "web-hook-worker": {
+      "type": "application",
+      "root": "apps/web-hook-worker",
+      "entryFile": "main",
+      "sourceRoot": "apps/web-hook-worker/src",
+      "compilerOptions": {
+        "webpack": true,
+        "tsConfigPath": "apps/web-hook-worker/tsconfig.app.json"
+      }
+    },
+    "web-hook-target": {
+      "type": "application",
+      "root": "apps/web-hook-target",
+      "entryFile": "main",
+      "sourceRoot": "apps/web-hook-target/src",
+      "compilerOptions": {
+        "webpack": true,
+        "tsConfigPath": "apps/web-hook-target/tsconfig.app.json"
+      }
+    }
+  }
+}

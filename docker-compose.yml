@@ -1,0 +1,27 @@
+version: "3.9"
+services:
+  mongodb:
+    image: mongo
+    volumes:
+       - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=mongoadmin
+      - MONGO_INITDB_ROOT_PASSWORD=mongoadmin
+      - MONGO_INITDB_DATABASE=web_hook_job
+    ports:
+      - "127.0.0.1:27017:27017"
+    networks:
+      - ebm
+
+  redis:
+    image: redis
+    ports:
+      - "127.0.0.1:6379:6379"
+    volumes:
+      - ./volumes/redis_data:/data
+    networks:
+      - ebm
+
+networks:
+  ebm:
+    driver: bridge
