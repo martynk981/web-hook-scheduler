@@ -2,8 +2,11 @@
 
 Webhook scheduler service
 
+## Architecture
+Service uses queue approach (job/worker) to schedule the jobs.
+
 Service consists of three applications:
-- web-hook-scheduler
+- **web-hook-scheduler**
   API to create jobs and get status of the job
 
   GET /timers/{jobId} returns job status:
@@ -25,11 +28,11 @@ Service consists of three applications:
   }
   ```
 
-- web-hook-worker
+- **web-hook-worker**
   Standalone application which listens to the queue and runs jobs
 
 
-- web-hook-target
+- **web-hook-target**
   Simple application to test the webhooks. Stores in the memory cache last calls for 10 minutes.
   GET /{id} - logs in the cache the id
 
