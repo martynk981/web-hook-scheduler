@@ -40,6 +40,16 @@ Service consists of three applications:
 
 
   GET /log/access-log - returns all ids
+  
+  Appications `web-hook-schedule` and `web-hook-worker` can be scaled out and run as many instances as needed, the only thing which has to be set up is a load balancer before the web-hook-schedule API. 
+  Redis is used to store jobs
+  MongoDb stores logs of the jobs, since once job is completed it is removed from the redis
+  
+## Tech stack:
+Langauge: NodeJs+Typescript
+Framework: NestJs (https://github.com/nestjs/nest)
+Queue manager: bull (https://github.com/OptimalBits/bull)
+Storage: MongoDb, Redis
 
 ## Running the app
 
