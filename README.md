@@ -46,10 +46,10 @@ Service consists of three applications:
   MongoDb stores logs of the jobs, since once job is completed it is removed from the redis
   
 ## Tech stack:
-Langauge: NodeJs+Typescript
-Framework: NestJs (https://github.com/nestjs/nest)
-Queue manager: bull (https://github.com/OptimalBits/bull)
-Storage: MongoDb, Redis
+- Langauge: NodeJs+Typescript
+- Framework: NestJs (https://github.com/nestjs/nest)
+- Queue manager: bull (https://github.com/OptimalBits/bull)
+- Storage: MongoDb, Redis
 
 ## Running the app
 
