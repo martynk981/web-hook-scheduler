@@ -3,7 +3,7 @@
 Webhook scheduler service
 
 ## Architecture
-Service uses queue approach (job/worker) to schedule the jobs.
+Service uses the queue approach (job/worker) to schedule the jobs.
 
 ![schduler drawio](https://user-images.githubusercontent.com/13293121/138572922-997b51b5-b5ed-4694-ad16-551f0b470dd8.png)
 
@@ -17,7 +17,7 @@ Service consists of three applications:
     "id": "2",
     "url": "http://localhost:9000",
     "timeLeft": 4,
-    "status": "created"
+    "status": "created" | "processed" | "failed"
   }
   ```
   POST /timers creates new job in the queue. Payload:
