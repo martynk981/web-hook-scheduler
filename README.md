@@ -53,7 +53,7 @@ Service consists of three applications:
 
 ## Running the app
 
-1. Create redis and mongo server
+1. Create the redis and mongo server
 ```bash
 $ docker-compose up -d
 ```
@@ -62,7 +62,7 @@ $ docker-compose up -d
 $ npm i
 ```
 
-3. Run application stack
+3. Run the application stack (web-hook-scheduler, web-hook-worker, web-hook-target)
 ```bash
 $ npm run start
 ```
