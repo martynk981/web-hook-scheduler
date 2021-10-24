@@ -9,7 +9,7 @@ Service uses the queue approach (job/worker) to schedule the jobs.
 
 Service consists of three applications:
 - **web-hook-scheduler**
-  API to create jobs and get status of the job
+  API to create jobs and to get the status of a job
 
   GET /timers/{jobId} returns job status:
   ```JSON
@@ -20,7 +20,7 @@ Service consists of three applications:
     "status": "created" | "processed" | "failed"
   }
   ```
-  POST /timers creates new job in the queue. Payload:
+  POST /timers creates a new job in the queue. Payload:
   ```JSON
   {
     "hours": 0,
@@ -36,10 +36,10 @@ Service consists of three applications:
 
 - **web-hook-target**
   Simple application to test the webhooks. Stores in the memory cache last calls for 10 minutes.
-  GET /{id} - logs in the cache the id
+  GET /{id} - logs to the cache the id
 
 
-  GET /log/access-log - returns all ids
+  GET /log/access-log - returns all logged ids
   
   Appications `web-hook-schedule` and `web-hook-worker` can be scaled out and run as many instances as needed, the only thing which has to be set up is a load balancer before the web-hook-schedule API. 
   Redis is used to store jobs
