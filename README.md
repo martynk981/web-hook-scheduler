@@ -68,8 +68,8 @@ $ npm run start
 ```
 It runs 3 applications:
 - web-hook-scheduler at http://localhost:3000
-- web-hook-worker as stand alone application
-- web-hook-target    at http://localhost:9000
+- web-hook-worker as the stand alone application
+- web-hook-target at http://localhost:9000
 
 ## Test
 
