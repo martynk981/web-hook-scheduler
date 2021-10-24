@@ -8,6 +8,7 @@ Service uses the queue approach (job/worker) to schedule the jobs.
 ![schduler drawio](https://user-images.githubusercontent.com/13293121/138572922-997b51b5-b5ed-4694-ad16-551f0b470dd8.png)
 
 Service consists of three applications:
+( see: https://github.com/martynk981/web-hook-scheduler/tree/main/apps )
 - **web-hook-scheduler**
   API to create jobs and to get the status of a job
 
