@@ -79,8 +79,8 @@ $ npm run test:e2e
 ```
 Test runs the next scenario:
 1. Schedules a new job delayed for 5 seconds with the target URL http://localhost:9000 (web-hook-target)
-2. Checks the status of the new job by the jobId if it was created
-3. Waits 6 seconds
+2. Checks the status of the new job by the jobId returned at step 1.
+3. Waits for 6 seconds
 4. Checks if the status of the job is 'processed'
 5. Checks if the http://localhost:9000 (web-hook-target) was called with the jobId
 
