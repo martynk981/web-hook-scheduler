@@ -84,7 +84,8 @@ Test runs the next scenario:
 4. Checks if the status of the job is 'processed'
 5. Checks if the http://localhost:9000 (web-hook-target) was called with the jobId
 
-## Test
+## TODO
+- Request validation
 - Open API spec
 - Unit test coverage
 - Error handling
